@@ -21,3 +21,4 @@ namespace Alphabody.LojaVirtual.Dominio.Entidade
 
     }
 }
+ 
