@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Alphabody.LojaVirtual.Dominio.Entidade
 {
-    class Produto
+    public class Produto
     {
 
         public int ProdutoID { get; set; }
