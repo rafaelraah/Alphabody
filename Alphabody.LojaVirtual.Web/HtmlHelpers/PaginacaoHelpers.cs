@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
@@ -16,11 +17,11 @@ namespace Alphabody.LojaVirtual.Web.HtmlHelpers
 
             StringBuilder resultadoStringBuilder = new StringBuilder();
 
-            for (int i = 0; i < paginacao.TotalDePaginas; i++)
+            for (int i = 1; i <= paginacao.TotalDePaginas; i++)
             {
-                TagBuilder tagBuilder = new TagBuilder("<a>");
+                TagBuilder tagBuilder = new TagBuilder("a");
 
-                tagBuilder.MergeAttribute("href",paginaUrl(i));
+                tagBuilder.MergeAttribute("href", paginaUrl(i));
                 tagBuilder.InnerHtml = i.ToString();
 
                 if (i == paginacao.PaginaAtual)
@@ -38,5 +39,8 @@ namespace Alphabody.LojaVirtual.Web.HtmlHelpers
 
         }
 
+
     }
+
+
 }
